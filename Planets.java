@@ -23,7 +23,7 @@ public class Planets extends JPanel implements ActionListener {
     //Code will execute every 5 milliseconds
     Timer tm=new Timer(5,this);
     BufferedReader br=null;
-    List<CelestialBodies> list;
+    List2<CelestialBodies> list;
     double pixerLength=0;
     int fileLength;
     //getInput reads the file and stores all the information in BufferedReader variable called br
@@ -50,10 +50,11 @@ public class Planets extends JPanel implements ActionListener {
             temp.readLine();
             temp.readLine();
             if (b.readLine().equals("ArrayList")) {
-                list = new ArrayList<CelestialBodies>();
+                list = new ArrayList2<CelestialBodies>();
             }
-            else
-                list=new LinkedList<CelestialBodies>();
+            else {
+                list = new LinkedList2<CelestialBodies>();
+            }
 
             pixerLength=Double.parseDouble(b.readLine());
 
