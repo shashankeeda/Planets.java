@@ -84,7 +84,6 @@ public class ArrayList2<T> implements List2<T> {
             arr[i] = arr[i+1];
         }
 
-        arr[arr.length-1] = null;
         size--;
         return val;
     }
